@@ -1,0 +1,36 @@
+<MainLayout>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: '10dp'
+        spacing: '10dp'
+
+        Label:
+            text: '老年人跌倒检测系统'
+            font_size: '24sp'
+            size_hint_y: 0.1
+
+        Camera:
+            id: camera
+            resolution: (640, 480)
+            play: True
+            size_hint_y: 0.6
+
+        Button:
+            text: '紧急求助'
+            font_size: '20sp'
+            background_color: 1, 0, 0, 1
+            size_hint_y: 0.15
+            on_press: app.emergency_call()
+
+        GridLayout:
+            cols: 2
+            size_hint_y: 0.15
+            spacing: '10dp'
+            
+            Button:
+                text: '设置'
+                font_size: '18sp'
+            
+            Button:
+                text: '健康记录'
+                font_size: '18sp' 
